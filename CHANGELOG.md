@@ -12,3 +12,5 @@
 - Fix edge case in logic (2017-4-24 11:55:00)
 - Add unit tests (2017-4-5 10:65:00)
 - Clean up temporary files (2017-7-7 16:75:00)
+- Refactor (2017-1-10 14:42:00)
+
