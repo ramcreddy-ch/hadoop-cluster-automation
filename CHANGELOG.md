@@ -14,3 +14,5 @@
 - Clean up temporary files (2017-7-7 16:75:00)
 - Refactor (2017-1-10 14:42:00)
 
+- Performance tuning (2017-1-21 12:45:00)
+
