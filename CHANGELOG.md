@@ -16,3 +16,5 @@
 
 - Performance tuning (2017-1-21 12:45:00)
 
+- Optimizations (2017-2-5 16:36:00)
+
