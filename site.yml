@@ -1,0 +1,27 @@
+---
+- name: Install Java & Hadoop Prerequisites
+  hosts: all
+  become: true
+  tasks:
+    - name: Install JDK 8
+      yum:
+        name: java-1.8.0-openjdk
+        state: present
+
+    - name: Disable SELinux
+      selinux:
+        state: disabled
+
+    - name: Set vm.swappiness
+      sysctl:
+        name: vm.swappiness
+        value: '1'
+        state: present
+
+- name: Deploy Hadoop
+  hosts: hadoop_nodes
+  roles:
+    - { role: common }
+    - { role: hdfs_namenode, when: "inventory_hostname in groups['namenodes']" }
+    - { role: hdfs_datanode, when: "inventory_hostname in groups['datanodes']" }
+    - { role: yarn_resourcemanager, when: "inventory_hostname in groups['namenodes']" }
