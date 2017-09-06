@@ -1,1 +1,2 @@
 - Update README documentation (2017-9-8 10:00:00)
+- Refactor configuration files (2017-9-6 9:10:00)
